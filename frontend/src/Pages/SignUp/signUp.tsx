@@ -57,7 +57,7 @@ export default function SignUp() {
               Sign up
             </Heading>
             <Text fontSize={"lg"} color={"gray.600"}>
-              to enjoy all of our cool features ✌️
+              to enjoy all of our Organic Products ✌️
             </Text>
           </Stack>
           <Box
@@ -141,7 +141,7 @@ export default function SignUp() {
                 <Text align={"center"}>
                   Already a user?{" "}
                   <Link color={"blue.400"} href="/sigin">
-                    Login
+                    Signin
                   </Link>
                 </Text>
               </Stack>
