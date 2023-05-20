@@ -1,6 +1,5 @@
 import {
   Box,
-  chakra,
   Container,
   Stack,
   Text,
@@ -23,7 +22,6 @@ import {
   NumberIncrementStepper,
   NumberDecrementStepper,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdLocalShipping } from "react-icons/md";
 import apple from "../../assets/images/apple.jpg";
 import { useState } from "react";

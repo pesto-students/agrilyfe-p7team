@@ -8,7 +8,6 @@ import {
   Button,
   Image,
   Flex,
-  Divider,
 } from "@chakra-ui/react";
 import SummaryCard from "./summaryCard";
 import { useNavigate } from "react-router-dom";
