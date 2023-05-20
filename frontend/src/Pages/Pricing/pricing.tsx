@@ -33,7 +33,7 @@ export default function Pricing() {
     <Box py={12}>
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
-          Plans that fit your need
+          Plans to Get High Yields
         </Heading>
         <Text fontSize="lg" color={'gray.500'}>
           Start with 14-day free trial. No credit card needed. Cancel at
@@ -49,11 +49,11 @@ export default function Pricing() {
         <PriceWrapper>
           <Box py={4} px={12}>
             <Text fontWeight="500" fontSize="2xl">
-              Hobby
+            Guidance
             </Text>
             <HStack justifyContent="center">
               <Text fontSize="3xl" fontWeight="600">
-                $
+              &#8377;
               </Text>
               <Text fontSize="5xl" fontWeight="900">
                 79
@@ -70,15 +70,11 @@ export default function Pricing() {
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
+                Connecting to AgriLyfe Expert
               </ListItem>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+                unlimited access to blogs
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
@@ -114,7 +110,7 @@ export default function Pricing() {
               </Text>
               <HStack justifyContent="center">
                 <Text fontSize="3xl" fontWeight="600">
-                  $
+                  &#8377;
                 </Text>
                 <Text fontSize="5xl" fontWeight="900">
                   149
@@ -131,23 +127,19 @@ export default function Pricing() {
               <List spacing={3} textAlign="start" px={12}>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  unlimited build minutes
+                  unlimited access to blogs
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  Lorem, ipsum dolor.
+                  Connecting to AgriLyfe Expert
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  Providing Guidance  in Agriculture Farming
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  Helps to Grow Your Business
                 </ListItem>
               </List>
               <Box w="80%" pt={7}>
@@ -165,7 +157,7 @@ export default function Pricing() {
             </Text>
             <HStack justifyContent="center">
               <Text fontSize="3xl" fontWeight="600">
-                $
+                &#8377;
               </Text>
               <Text fontSize="5xl" fontWeight="900">
                 349
@@ -180,19 +172,27 @@ export default function Pricing() {
             py={4}
             borderBottomRadius={'xl'}>
             <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
-              </ListItem>
-            </List>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  unlimited access to blogs
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Connecting to AgriLyfe Expert
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Providing Guidance  in Agriculture Farming
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Helps to Grow Your Business
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Gets Potential Buyers
+                </ListItem>
+              </List>
             <Box w="80%" pt={7}>
               <Button w="full" colorScheme="red" variant="outline">
                 Start trial

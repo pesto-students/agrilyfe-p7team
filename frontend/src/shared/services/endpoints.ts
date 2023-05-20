@@ -19,7 +19,7 @@ const getApiEndpoints = (userRole: string) => {
   return {
     // login: "/api/auth/signin",
     // devices
-    getDevices: `/${dynamicEndPoint}/api/v1/device/getAllDevicesByCompany`,
+    getDashboard: `/${dynamicEndPoint}/api/v1/device/getDashboard`,
   }
 }
 
