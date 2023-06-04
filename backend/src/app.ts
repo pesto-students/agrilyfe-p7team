@@ -8,7 +8,7 @@ const path =          require("path");
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // change this url to deployed UI url
+    origin: "http://localhost:8080", // change this url to deployed UI url
     credentials: true,
   })
 );

@@ -16,6 +16,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
     "@mui/material": "^5.13.3",
     "@types/react-helmet": "^6.1.6",
     "@types/react-router-dom": "^5.3.3",

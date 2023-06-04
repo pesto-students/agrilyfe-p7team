@@ -2,9 +2,10 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import styles from '../../styles/styles'
 import EventCard from "./EventCard";
+import { isNotNullAndUndefined } from '../../utils/util';
 
 const Events = () => {
-  const {allEvents,isLoading} = useSelector((state: any) => state.events);  
+  const { allEvents, isLoading } = useSelector((state: any) => state.events);  
    
   return (
     <div>
@@ -17,6 +18,7 @@ const Events = () => {
 
       <div className="w-full grid">
          {
+          isNotNullAndUndefined(allEvents) &&
           allEvents.length !== 0 && (
             <EventCard data={allEvents && allEvents[0]} />
           )
