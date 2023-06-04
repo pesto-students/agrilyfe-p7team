@@ -1,11 +1,12 @@
 import { useState } from 'react'
-
 export const Counter = () => {
-  const [count, setCount] = useState(0)
+
   return (
-    <div>
-      <h3>Update the count </h3>
-      <button onClick={() => setCount((c) => c + 1)}>Count - {count}</button>
-    </div>
+    <>
+    {/* <!-- Humberger Begin --> */}
+
+    <h1>hello</h1>
+    {/* <!-- Header Section End --> */}
+    </>
   )
 }

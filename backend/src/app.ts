@@ -1,50 +1,56 @@
-const express = require('express');
-const ErrorHandler = require("./middleware/error");
-const morgan = require("morgan");
-const cors = require("cors");
+const express =       require("express");
+const ErrorHandler =  require("./middleware/error");
+const app =           express();
+const cookieParser =  require("cookie-parser");
+const bodyParser =    require("body-parser");
+const cors =          require("cors");
+const path =          require("path");
 
-const cookieParser = require("cookie-parser");
-const bodyParser = require("body-parser");
-const app = express();
+app.use(
+  cors({
+    origin: "http://localhost:3000", // change this url to deployed UI url
+    credentials: true,
+  })
+);
 
-app.use(morgan("dev"));
-app.use(cors());
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(cookieParser());
+app.use("/", express.static(path.join(__dirname, "./uploads")));
 app.use("/test", (req: any, res: any) => {
-    res.send("Hello world!");
-  });
+  res.send("Hello world!");
+});
 
-//config
+app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+
+// config
 if (process.env.NODE_ENV !== "PRODUCTION") {
-    require("dotenv").config({
-      path: "src/config/.env",
-    });
-  }
+  require("dotenv").config({
+    path: "config/.env",
+  });
+}
 
-  // import routes
-const authRouter = require("./routes/authRoute");
-const productRouter = require("./routes/productRoute");
-const blogRouter = require("./routes/blogRoute");
-const categoryRouter = require("./routes/prodcategoryRoute");
-const blogcategoryRouter = require("./routes/blogCatRoute");
-const brandRouter = require("./routes/brandRoute");
-const colorRouter = require("./routes/colorRoute");
-const enqRouter = require("./routes/enqRoute");
-const couponRouter = require("./routes/couponRoute");
-const uploadRouter = require("./routes/uploadRoute");
+// import routes
+const user =          require("./controller/user");
+const shop =          require("./controller/shop");
+const product =       require("./controller/product");
+const event =         require("./controller/event");
+const coupon =        require("./controller/coupounCode");
+const payment =       require("./controller/payment");
+const order =         require("./controller/order");
+const conversation =  require("./controller/conversation");
+const message =       require("./controller/message");
+const withdraw =      require("./controller/withdraw");
 
-app.use("/api/p7/user", authRouter);
-app.use("/api/p7/product", productRouter);
-app.use("/api/p7/blog", blogRouter);
-app.use("/api/p7/category", categoryRouter);
-app.use("/api/p7/blogcategory", blogcategoryRouter);
-app.use("/api/p7/brand", brandRouter);
-app.use("/api/p7/coupon", couponRouter);
-app.use("/api/p7/color", colorRouter);
-app.use("/api/p7/enquiry", enqRouter);
-app.use("/api/p7/upload", uploadRouter);
+app.use("/api/v2/user", user);
+app.use("/api/v2/conversation", conversation);
+app.use("/api/v2/message", message);
+app.use("/api/v2/order", order);
+app.use("/api/v2/shop", shop);
+app.use("/api/v2/product", product);
+app.use("/api/v2/event", event);
+app.use("/api/v2/coupon", coupon);
+app.use("/api/v2/payment", payment);
+app.use("/api/v2/withdraw", withdraw);
 
 // it's for ErrorHandling
 app.use(ErrorHandler);

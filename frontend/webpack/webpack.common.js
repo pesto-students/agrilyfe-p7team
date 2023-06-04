@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', 'jsx'],
   },
   module: {
     rules: [
@@ -19,11 +19,23 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.scss$/,
+        use:  [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+          "postcss-loader",
+        ],
       },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader','postcss-loader'],
+      },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg|avif)$/i,
         type: 'asset/resource',
       },
       {

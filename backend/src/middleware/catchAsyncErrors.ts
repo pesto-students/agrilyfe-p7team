@@ -1,5 +1,3 @@
-import { Request, Response, NextFunction } from 'express';
-
-module.exports = (theFunc: any) => (req: Request, res: Response, next: NextFunction) => {
-    Promise.resolve(theFunc(req, res, next)).catch(next);
-  };
+module.exports = (theFunc: any) => (req: any, res: any, next: any) => {
+  Promise.resolve(theFunc(req, res, next)).catch(next);
+};
