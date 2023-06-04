@@ -12,7 +12,7 @@ const fs = require("fs");
 router.post(
   "/create-event",
   upload.array("images"),
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const shopId = req.body.shopId;
       const shop = await Shop.findById(shopId);
@@ -20,7 +20,7 @@ router.post(
         return next(new ErrorHandler("Shop Id is invalid!", 400));
       } else {
         const files = req.files;
-        const imageUrls = files.map((file) => `${file.filename}`);
+        const imageUrls = files.map((file: any) => `${file.filename}`);
 
         const eventData = req.body;
         eventData.images = imageUrls;
@@ -40,7 +40,7 @@ router.post(
 );
 
 // get all events
-router.get("/get-all-events", async (req, res, next) => {
+router.get("/get-all-events", async (req: any, res: any, next: any) => {
   try {
     const events = await Event.find();
     res.status(201).json({
@@ -55,7 +55,7 @@ router.get("/get-all-events", async (req, res, next) => {
 // get all events of a shop
 router.get(
   "/get-all-events/:id",
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const events = await Event.find({ shopId: req.params.id });
 
@@ -72,17 +72,17 @@ router.get(
 // delete event of a shop
 router.delete(
   "/delete-shop-event/:id",
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const productId = req.params.id;
 
       const eventData = await Event.findById(productId);
 
-      eventData.images.forEach((imageUrl) => {
+      eventData.images.forEach((imageUrl: any) => {
         const filename = imageUrl;
         const filePath = `uploads/${filename}`;
 
-        fs.unlink(filePath, (err) => {
+        fs.unlink(filePath, (err: any) => {
           if (err) {
             console.log(err);
           }
@@ -110,7 +110,7 @@ router.get(
   "/admin-all-events",
   isAuthenticated,
   isAdmin("Admin"),
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const events = await Event.find().sort({
         createdAt: -1,
@@ -119,7 +119,7 @@ router.get(
         success: true,
         events,
       });
-    } catch (error) {
+    } catch (error: any) {
       return next(new ErrorHandler(error.message, 500));
     }
   })

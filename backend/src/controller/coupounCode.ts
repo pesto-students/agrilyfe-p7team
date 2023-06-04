@@ -10,7 +10,7 @@ const router = express.Router();
 router.post(
   "/create-coupon-code",
   isSeller,
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const isCoupounCodeExists = await CoupounCode.find({
         name: req.body.name,
@@ -36,7 +36,7 @@ router.post(
 router.get(
   "/get-coupon/:id",
   isSeller,
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const couponCodes = await CoupounCode.find({ shopId: req.seller.id });
       res.status(201).json({
@@ -53,7 +53,7 @@ router.get(
 router.delete(
   "/delete-coupon/:id",
   isSeller,
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const couponCode = await CoupounCode.findByIdAndDelete(req.params.id);
 
@@ -73,7 +73,7 @@ router.delete(
 // get coupon code value by its name
 router.get(
   "/get-coupon-value/:name",
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const couponCode = await CoupounCode.findOne({ name: req.params.name });
 

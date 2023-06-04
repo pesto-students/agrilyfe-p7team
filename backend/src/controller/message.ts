@@ -10,7 +10,7 @@ const router = express.Router();
 router.post(
   "/create-new-message",
   upload.single("images"),
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const messageData = req.body;
 
@@ -37,7 +37,7 @@ router.post(
         success: true,
         message,
       });
-    } catch (error) {
+    } catch (error: any) {
       return next(new ErrorHandler(error.message), 500);
     }
   })
@@ -46,7 +46,7 @@ router.post(
 // get all messages with conversation id
 router.get(
   "/get-all-messages/:id",
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const messages = await Messages.find({
         conversationId: req.params.id,
@@ -56,7 +56,7 @@ router.get(
         success: true,
         messages,
       });
-    } catch (error) {
+    } catch (error: any) {
       return next(new ErrorHandler(error.message), 500);
     }
   })

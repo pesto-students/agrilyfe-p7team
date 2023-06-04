@@ -8,7 +8,7 @@ const router = express.Router();
 // create a new conversation
 router.post(
   "/create-new-conversation",
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const { groupTitle, userId, sellerId } = req.body;
 
@@ -31,7 +31,7 @@ router.post(
           conversation,
         });
       }
-    } catch (error) {
+    } catch (error: any) {
       return next(new ErrorHandler(error.response.message), 500);
     }
   })
@@ -41,7 +41,7 @@ router.post(
 router.get(
   "/get-all-conversation-seller/:id",
   isSeller,
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const conversations = await Conversation.find({
         members: {
@@ -64,7 +64,7 @@ router.get(
 router.get(
   "/get-all-conversation-user/:id",
   isAuthenticated,
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const conversations = await Conversation.find({
         members: {
@@ -85,7 +85,7 @@ router.get(
 // update the last message
 router.put(
   "/update-last-message/:id",
-  catchAsyncErrors(async (req, res, next) => {
+  catchAsyncErrors(async (req: any, res: any, next: any) => {
     try {
       const { lastMessage, lastMessageId } = req.body;
 
