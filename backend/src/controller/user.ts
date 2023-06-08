@@ -41,7 +41,7 @@ router.post("/create-user", upload.single("file"), async (req: any, res: any, ne
     const activationToken = createActivationToken(user);
 
     // const activationUrl = `https://tutorial-cefl.vercel.app/activation/${activationToken}`;
-    const activationUrl = `http://localhost:8080/activation/${activationToken}`;
+    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
 
     try {
       await sendMail({

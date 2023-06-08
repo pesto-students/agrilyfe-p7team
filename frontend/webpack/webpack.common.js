@@ -7,6 +7,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
+
+  
+
   module: {
     rules: [
       {
@@ -47,7 +50,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '..', './build'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './src/index.html'),

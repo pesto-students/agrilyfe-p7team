@@ -14,8 +14,8 @@ import { Link } from "react-router-dom";
 const AllSellers = () => {
   const dispatch = useDispatch();
   const { sellers } = useSelector((state: any) => state.seller);
-  const [open, setOpen]: any = useState(false);
-  const [userId, setUserId]: any = useState("");
+  const [open, setOpen] = useState<any>(false);
+  const [userId, setUserId] = useState<any>("");
 
   useEffect(() => {
     dispatch(getAllSellers());
@@ -91,7 +91,10 @@ const AllSellers = () => {
       renderCell: (params: any) => {
         return (
           <>
-            <Button onClick={() => setUserId(params.id) || setOpen(true)}>
+            <Button onClick={() => {
+              //@ts-ignore
+              setUserId(params.id) || setOpen(true)
+            }}>
               <AiOutlineDelete size={20} />
             </Button>
           </>
@@ -143,7 +146,10 @@ const AllSellers = () => {
                 </div>
                 <div
                   className={`${styles.button} text-white text-[18px] !h-[42px] ml-4`}
-                  onClick={() => setOpen(false) || handleDelete(userId)}
+                  onClick={() => {
+                    //@ts-ignore
+                    setOpen(false) || handleDelete(userId)
+                  }}
                 >
                   confirm
                 </div>

@@ -14,8 +14,8 @@ import { toast } from "react-toastify";
 const AllUsers = () => {
   const dispatch = useDispatch();
   const { users } = useSelector((state: any) => state.user);
-  const [open, setOpen]: any = useState(false);
-  const [userId, setUserId]: any = useState("");
+  const [open, setOpen] = useState<any>(false);
+  const [userId, setUserId] = useState<any>("");
 
   useEffect(() => {
     dispatch(getAllUsers());
@@ -73,7 +73,10 @@ const AllUsers = () => {
       renderCell: (params: any) => {
         return (
           <>
-            <Button onClick={() => setUserId(params.id) || setOpen(true)}>
+          
+            <Button onClick={() => 
+              {          //@ts-ignore
+                setUserId(params.id) || setOpen(true)}}>
               <AiOutlineDelete size={20} />
             </Button>
           </>
@@ -125,7 +128,9 @@ const AllUsers = () => {
                 </div>
                 <div
                   className={`${styles.button} text-white text-[18px] !h-[42px] ml-4`}
-                  onClick={() =>  setOpen(false) || handleDelete(userId)}
+                  onClick={() =>  {
+                              //@ts-ignore
+                    setOpen(false) || handleDelete(userId)}}
                 >
                   confirm
                 </div>
