@@ -69,7 +69,8 @@ const ProductCard = ({ data,isEvent }: any) => {
           <img
             src={`${backend_url}${data.images && data.images[0]}`}
             alt=""
-            className="w-full h-[170px] object-contain"
+            className="h-[170px] object-contain"
+            style={{ width: "92%" }}
           />
         </Link>
         <Link to={`/shop/preview/${data?.shop._id}`}>
@@ -90,7 +91,7 @@ const ProductCard = ({ data,isEvent }: any) => {
                 {data.originalPrice === 0
                   ? data.originalPrice
                   : data.discountPrice}
-                $
+                 &#8377;
               </h5>
               <h4 className={`${styles.price}`}>
                 {data.originalPrice ? data.originalPrice + " $" : null}
