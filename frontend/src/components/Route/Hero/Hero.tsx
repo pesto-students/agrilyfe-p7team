@@ -18,16 +18,15 @@ const Hero = () => {
           style={{ color: "aliceblue" }}
           className={`text-[35px] leading-[1.2] 800px:text-[60px] text-[#3d3a3a] font-[600] capitalize`}
         >
-          Best Quality Products
+          🌾 Welcome to AgriLyfe!
         </h1>
         <p
           className="pt-5 text-[16px] font-[Poppins] font-[400] text-[#000000ba]"
           style={{ color: "white", fontWeight: "bold" }}
         >
-          Join The Organic Movement!
-          <br /> The customealiceblue customer will be followed by the customer.
-          As the land of the land, the mourning nor the corporal of the land,
-          the pillow of the lion.
+          🌾 Join The Organic Movement!
+          <br /> 
+          🌾 Your One-Stop Destination for Premium Agricultural Products
         </p>
         <Link to="/products" className="inline-block">
           <div className={`${styles.button} mt-5`}>

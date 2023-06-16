@@ -69,7 +69,7 @@ const ProductCard = ({ data,isEvent }: any) => {
           <img
             src={`${backend_url}${data.images && data.images[0]}`}
             alt=""
-            className="w-92 h-[170px] object-contain"
+            className="w-full h-[170px] object-contain"
           />
         </Link>
         <Link to={`/shop/preview/${data?.shop._id}`}>
