@@ -12,3 +12,7 @@ declare module '@paypal/react-paypal-js';
 declare module 'socket.io-client';
 declare module '@stripe/stripe-js';
 declare module 'timeago.js';
+<<<<<<< HEAD
+=======
+declare module 'enzyme-adapter-react-15';
+>>>>>>> feedback
