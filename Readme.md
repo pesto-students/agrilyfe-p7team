@@ -30,7 +30,7 @@ Please Note:
 <br/>
 Test Credentials:
 
-- For User
+- For Guest User
   - Email: agrilyfetest@gmail.com
   - Password: test123
 
