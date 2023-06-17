@@ -30,8 +30,8 @@ Please Note:
 <br/>
 Test Credentials:
 
-- For Admin
-  - Email: vamsikrishna.inn@gmail.com
+- For User
+  - Email: mrkancharla2@gmail.com
   - Password: test123
 
 <br/>
