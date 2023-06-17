@@ -61,7 +61,7 @@ We tried to use a completely modern tech stack while testing out some new techno
 
 # Authors
 
-- [vamsi krishna](https://github.com/)
+- [vamsi krishna](https://github.com/vamsilearner)
 - [Parveen Narwal](https://github.com/PraveenNarwal/)
 
 <br/>
