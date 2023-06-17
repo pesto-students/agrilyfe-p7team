@@ -31,7 +31,7 @@ Please Note:
 Test Credentials:
 
 - For User
-  - Email: mrkancharla2@gmail.com
+  - Email: agrilyfetest@gmail.com
   - Password: test123
 
 <br/>
