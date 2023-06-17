@@ -51,11 +51,15 @@ Test Credentials:
 
 We tried to use a completely modern tech stack while testing out some new technologies that we had never used before. This resulted in a fast, performant, and easily-extensible web app that should be fairly future-proof for the coming next several years. We used:
 
+- [TailwindCss](https://tailwindcss.com/)
 - [Material Ui](https://mui.com/)
 - [Redux toolkit](https://redux-toolkit.js.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Axios](https://axios-http.com/docs/intro)
-- [TailwindCss](https://tailwindcss.com/)
+- [WebPack](https://webpack.js.org/)
+- [Google Analytics](https://analytics.google.com/analytics/web/provision/#/provision)
+- [Sentry](https://sentry.io/)
+
 
 <br/>
 
