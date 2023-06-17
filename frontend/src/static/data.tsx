@@ -604,19 +604,19 @@ export const footerProductLinks = [
 
 export const footercompanyLinks = [
   {
-    name: "Game & Video",
+    name: "Fresh Fruits",
   },
   {
-    name: "Phone &Tablets",
+    name: "Vegetables",
   },
   {
-    name: "Computers & Laptop",
+    name: "Food Grains",
   },
   {
-    name: "Sport Watches",
+    name: "Meat & Fish",
   },
   {
-    name: "Events",
+    name: "Organic Oils",
   },
 ];
 
