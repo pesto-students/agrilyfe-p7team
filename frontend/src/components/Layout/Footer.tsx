@@ -11,6 +11,8 @@ import {
   footerProductLinks,
   footerSupportLinks,
 } from "../../static/data";
+import logo from "../../Assests/images/logo.jpg";
+
 
 const Footer = () => {
   return (
@@ -36,13 +38,10 @@ const Footer = () => {
       </div>
       <div className="grid grid-cols-1 sm:gird-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16 sm:text-center">
         <ul className="px-5 text-center sm:text-start flex sm:block flex-col items-center">
-          <img
-            src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-            alt=""
-            style={{ filter: "brightness(0) invert(1)" }}
-          />
+        <img src={logo} alt="Agrilyfe logo" height="50px" width="52px" /> 
+        <h1><b>Agrilyfe</b></h1>
           <br />
-          <p>The home and elements needeed to create beatiful products.</p>
+          <p>Always Be Healthy and Joyful</p>
           <div className="flex items-center mt-[15px]">
             <AiFillFacebook size={25} className="cursor-pointer" />
             <AiOutlineTwitter
@@ -110,7 +109,7 @@ const Footer = () => {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
          text-center pt-2 text-gray-400 text-sm pb-8"
       >
-        <span>© 2020 Becodemy. All rights reserved.</span>
+        <span>© 2023 Agrilyfe. All rights reserved.</span>
         <span>Terms · Privacy Policy</span>
         <div className="sm:block flex items-center justify-center w-full">
           <img

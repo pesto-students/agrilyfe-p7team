@@ -51,7 +51,7 @@ Test Credentials:
 
 We tried to use a completely modern tech stack while testing out some new technologies that we had never used before. This resulted in a fast, performant, and easily-extensible web app that should be fairly future-proof for the coming next several years. We used:
 
-- [Ant design](https://ant.design/)
+- [Material Ui](https://mui.com/)
 - [Redux toolkit](https://redux-toolkit.js.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Axios](https://axios-http.com/docs/intro)
@@ -61,7 +61,7 @@ We tried to use a completely modern tech stack while testing out some new techno
 
 # Authors
 
-- [vamsi krishna](https://github.com/)
+- [vamsi krishna](https://github.com/vamsilearner)
 - [Parveen Narwal](https://github.com/PraveenNarwal/)
 
 <br/>

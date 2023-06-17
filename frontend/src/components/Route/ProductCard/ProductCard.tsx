@@ -20,6 +20,7 @@ import { useEffect } from "react";
 import { addTocart } from "../../../redux/actions/cart";
 import { toast } from "react-toastify";
 import Ratings from "../../Products/Ratings";
+import ReactGA from "react-ga";
 
 const ProductCard = ({ data,isEvent }: any) => {
   const { wishlist } = useSelector((state: any) => state.wishlist);
@@ -36,17 +37,29 @@ const ProductCard = ({ data,isEvent }: any) => {
     }
   }, [wishlist]);
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+  
   const removeFromWishlistHandler = (data: any) => {
     setClick(!click);
     dispatch(removeFromWishlist(data));
   };
 
   const addToWishlistHandler = (data: any) => {
+    ReactGA.event({
+      category: "Product Wishlist",
+      action: "Product Wishlist",
+    })
     setClick(!click);
     dispatch(addToWishlist(data));
   };
 
   const addToCartHandler = (id: any) => {
+    ReactGA.event({
+      category: "Product Cart",
+      action: "Product Cart",
+    })
     const isItemExists = cart && cart.find((i: any) => i._id === id);
     if (isItemExists) {
       toast.error("Item already in cart!");
