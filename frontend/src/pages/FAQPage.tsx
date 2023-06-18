@@ -72,9 +72,8 @@ const Faq = () => {
             <div className="mt-4">
               <p className="text-base text-gray-500">
                 If you're not satisfied with your purchase, we accept returns
-                within 30 days of delivery. To initiate a return, please email
-                us at support@myecommercestore.com with your order number and a
-                brief explanation of why you're returning the item.
+                At the time of Delivery Only Buyer has to check the Product Quality.
+                If not satisfied then Buyer can return the Product.
               </p>
             </div>
           )}
@@ -171,7 +170,7 @@ const Faq = () => {
             <div className="mt-4">
               <p className="text-base text-gray-500">
                 You can contact our customer support team by emailing us at
-                support@myecommercestore.com, or by calling us at (555) 123-4567
+                support@agrilyfe.com, or by calling us at (+91) 1234-456-789
                 between the hours of 9am and 5pm EST, Monday through Friday.
               </p>
             </div>
@@ -221,8 +220,7 @@ const Faq = () => {
               <p className="text-base text-gray-500">
                 Unfortunately, once an order has been placed, we are not able to
                 make changes or cancellations. If you no longer want the items
-                you've ordered, you can return them for a refund within 30 days
-                of delivery.
+                you've ordered, you can return them for a refund at the time of Delivery.
               </p>
             </div>
           )}
@@ -269,7 +267,7 @@ const Faq = () => {
           {activeTab === 6 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                Currently, we only offer shipping within the United States.
+                Currently, we only offer shipping within the India.
               </p>
             </div>
           )}
@@ -318,6 +316,98 @@ const Faq = () => {
               <p className="text-base text-gray-500">
                 We accept visa,mastercard,paypal payment method also we have
                 cash on delivery system.
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="border-b border-gray-200 pb-4">
+          <button
+            className="flex items-center justify-between w-full"
+            onClick={() => toggleTab(8)}
+          >
+            <span className="text-lg font-medium text-gray-900">
+              Are you Offering Free Shipping?
+            </span>
+            {activeTab === 8 ? (
+              <svg
+                className="h-6 w-6 text-gray-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-6 w-6 text-gray-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            )}
+          </button>
+          {activeTab === 8 && (
+            <div className="mt-4">
+              <p className="text-base text-gray-500">
+               Yes, Within 10Kms we are Offering free shipping.
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="border-b border-gray-200 pb-4">
+          <button
+            className="flex items-center justify-between w-full"
+            onClick={() => toggleTab(9)}
+          >
+            <span className="text-lg font-medium text-gray-900">
+              Products can be Delivered within 10kms Range only ?
+            </span>
+            {activeTab === 9 ? (
+              <svg
+                className="h-6 w-6 text-gray-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-6 w-6 text-gray-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            )}
+          </button>
+          {activeTab === 9 && (
+            <div className="mt-4">
+              <p className="text-base text-gray-500">
+               Due to Product Life Span & Logistics Issues, we are able to Deliver within 10Kms Only.
               </p>
             </div>
           )}

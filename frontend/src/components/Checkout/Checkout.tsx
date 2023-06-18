@@ -271,6 +271,7 @@ const ShippingInfo = ({
 
         <div></div>
       </form>
+      <label>Product will be Delivered with in 10 Kms Range Only</label>
       <h5
         className="text-[18px] cursor-pointer inline-block"
         onClick={() => setUserInfo(!userInfo)}

@@ -205,6 +205,9 @@ const ProductDetails = ({ data }: any) => {
                     Add to cart <AiOutlineShoppingCart className="ml-1" />
                   </span>
                 </div>
+                <div>
+                <p style={{color: "black"}} >Product will be Delivered with in 10 Kms Range</p>
+                  </div>
                 <div className="flex items-center pt-8">
                   <Link to={`/shop/preview/${data?.shop._id}`}>
                     <img
@@ -232,6 +235,7 @@ const ProductDetails = ({ data }: any) => {
                     </span>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
