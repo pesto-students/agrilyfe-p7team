@@ -30,7 +30,11 @@ Please Note:
 <br/>
 Test Credentials:
 
-- For Admin
+- For User/Buyer
+  - Email: agrilyfetest@gmail.com
+  - Password: test123
+
+- For Seller
   - Email: vamsikrishna.inn@gmail.com
   - Password: test123
 
