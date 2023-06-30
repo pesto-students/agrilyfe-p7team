@@ -20,14 +20,6 @@ The goal is to reduce the dependency on Devops / IT teams for granting access to
 [Live Demo](https://agri-front.vercel.app/)
 
 <br/>
-
-Please Note:
-
-1. We recommend using this app in Google Chrome
-2. Use the app on Laptop/desktop only as of now.
-3. We are using Auth0 for authentication, so for recruiter login, please don't use Safari, as it blocks third-party cookies.
-
-<br/>
 Test Credentials:
 
 - For User/Buyer
